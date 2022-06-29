@@ -1,43 +1,76 @@
-function createNode(value) {
-  return {
-    value: value,
-    next: null,
-  };
+class Node {
+  constructor(data, next = null) {
+    this.data = data;
+    this.next = next;
+  }
 }
 
 class LinkedList {
   constructor() {
     this.head = null;
-    this.tail = null;
-    this.length = 0;
+    this.size = 0;
   }
 
-  insert(value) {
-    this.length++;
-    let node = createNode(value); // or use new Node(value);
-
-    if (this.tail) {
-      this.tail.next = node;
-      this.tail = node;
-      return node;
-    }
-
-    this.head = this.tail = node;
-    return node;
+  insertFirst(data) {
+    this.head = new Node(data, this.head);
+    this.size++;
   }
 
-  print() {
+  printListData() {
     let current = this.head;
     while (current) {
-      console.log(current.value);
+      console.log(current.data);
       current = current.next;
     }
   }
+  insertLast(data) {
+    let node = new Node(data);
+    let current;
+
+    if (!this.head) {
+      this.head = node;
+    } else {
+      current = this.head;
+
+      while (current.next) {
+        current = current.next;
+      }
+      current.next = node;
+    }
+    this.size++;
+  }
+  insertAt(data, index) {
+    if (index > 0 && index > this.size) {
+      return;
+    }
+    // if first index
+    if (index === 0) {
+      this.insertFirst(data);
+      return;
+    }
+    const node = new Node(data);
+    let current, previous;
+
+    //set current to first
+    current = this.head;
+    let count = 0;
+
+    while (count < index) {
+      previous = current;
+      count++;
+      current = current.next;
+    }
+    node.next = current;
+    previous.next = node;
+  }
 }
 
-const linkedList = new LinkedList();
+let list = new LinkedList();
 
-linkedList.insert(7);
-linkedList.insert(8);
-linkedList.insert("safwan");
-linkedList.print();
+list.insertFirst(100);
+list.insertFirst(200);
+list.insertLast(300);
+list.insertAt(500, 1);
+list.printListData();
+
+console.log(list);
