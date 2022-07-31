@@ -10,7 +10,7 @@ function maxSubArraySum(a, size) {
   return max_so_far;
 }
 
-let a = [-2, -3, 4, -1, -2, 1, 5, -3];
+let a = [-2, -3, 4, -1];
 let n = a.length;
 
 console.log(maxSubArraySum(a, n));
