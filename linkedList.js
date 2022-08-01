@@ -31,12 +31,14 @@ class LinkedList {
       this.head = node;
     } else {
       current = this.head;
+      // console.log(current);
 
       while (current.next) {
         current = current.next;
       }
       current.next = node;
     }
+    console.log(this.head);
     this.size++;
   }
   insertAt(data, index) {
@@ -67,10 +69,13 @@ class LinkedList {
 
 let list = new LinkedList();
 
-list.insertFirst(100);
-list.insertFirst(200);
+// list.insertFirst(100);
+// list.insertFirst(200);
 list.insertLast(300);
-list.insertAt(500, 1);
+list.insertLast(400);
+list.insertLast(600);
+list.insertLast(700);
+// list.insertAt(500, 1);
 list.printListData();
 
-console.log(list);
+// console.log(list);
