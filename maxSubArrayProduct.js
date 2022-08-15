@@ -22,8 +22,7 @@ function maxSubarrayProduct(arr, n) {
 
 let arr = [1, -2, -3, 0, 7, -8, -2];
 let n = arr.length;
-console.log(maxSubarrayProduct(arr, n));
-// document.write("Maximum Sub array product is " + maxSubarrayProduct(arr, n));
+//console.log(maxSubarrayProduct(arr, n));
 
 //efficient
 function maxSubarrayProduct(arr, n) {
@@ -61,6 +60,6 @@ function maxSubarrayProduct(arr, n) {
 // Driver code
 let array = [1, -2, -3, 0, 7, -8, -2];
 let length = arr.length;
-document.write(
+console.log(
   "Maximum Sub array product is " + maxSubarrayProduct(array, length)
 );
