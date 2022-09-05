@@ -8,3 +8,5 @@ function uniqify(array = []) {
   console.log(uniqArray);
   return uniqArray;
 }
+
+uniqify([5, 5, 7, 6, 7, 8, 5]);
