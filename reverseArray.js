@@ -1,4 +1,4 @@
-let array = [2, 3, 4];
+let array = [1, 2, 3, 4, 5];
 let array2 = [];
 
 for (let i = array.length - 1; i >= 0; i--) {
