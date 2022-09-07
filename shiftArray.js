@@ -9,4 +9,4 @@ function array_move(arr, old_index, new_index) {
   return arr;
 }
 
-console.log(array_move([4, 5, 6, 7], 1, 6));
+console.log(array_move([4, 5, 6, 7], 1, 3));

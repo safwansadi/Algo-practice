@@ -1,13 +1,22 @@
-function rotateArray(arr, k) {
-  let tempArray = [];
-  for (let i = arr.length - k; i < arr.length; i++) {
-    tempArray.push(arr[i]);
-  }
-  for (let i = 0; i < arr.length - k; i++) {
-    tempArray.push(arr[i]);
-  }
+// function rotateArray(arr, k) {
+//   let tempArray = [];
+//   for (let i = arr.length - k; i < arr.length; i++) {
+//     tempArray.push(arr[i]);
+//   }
+//   for (let i = 0; i < arr.length - k; i++) {
+//     tempArray.push(arr[i]);
+//   }
 
-  return tempArray;
+//   return tempArray;
+// }
+
+// console.log(rotateArray([1, 2, 3, 4, 5], 2));
+
+function ritateArray(array) {
+  array.unshift(array.pop());
+  console.log(array);
+
+  return array;
 }
 
-console.log(rotateArray([1, 2, 3, 4, 5], 2));
+ritateArray([1, 2, 3, 4, 5]);
