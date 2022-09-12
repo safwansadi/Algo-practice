@@ -9,4 +9,4 @@ function move(array, move, at) {
   console.log(array);
   return array;
 }
-move([5, 3, 4, 2, 1], 3, 1);
+move([5, 3, 4, 2, 1], 4, 0);

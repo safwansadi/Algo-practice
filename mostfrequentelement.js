@@ -11,7 +11,6 @@ function mostFrequent(arr, n) {
     res = -1;
   hash.forEach((value, key) => {
     if (max_count < value) {
-      console.log(value);
       res = key;
       max_count = value;
     }
