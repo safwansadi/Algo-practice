@@ -13,7 +13,7 @@
 // console.log(output);
 
 let arr1 = [1, 2, 3, 4, 5],
-  arr2 = [3, 4, 5, 6, 7],
-  compare = (a1, a2) => arr1.filter((v) => arr2.includes(v)).length;
+  arr2 = [3, 4, 5, 6, 7, 1],
+  compare = (a1, a2) => arr1.filter((v) => arr2.includes(v));
 
 console.log(compare(arr1, arr2));

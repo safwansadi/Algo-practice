@@ -21,4 +21,4 @@ function findMaxMin(array) {
   return "avg " + avg;
 }
 
-console.log(findMaxMin([5, 3, 9, 10, 4, 5]));
+console.log(findMaxMin([5, 3, 9, 10, 4, 5, 2]));
